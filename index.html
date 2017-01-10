@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
     <script src="jquery.js"></script>
     <script src="data_generator.js"></script>
+    <script src="moment.min.js"></script>
+    <link rel="stylesheet" href="styles/main.css">
+    <title>Twittler</title>
   </head>
   <body>
     <script>
@@ -11,11 +15,15 @@
         var $body = $('body');
         $body.html('');
 
+        var $mainTitle = $('<h1>Twittler</h1>');
+        $mainTitle.prependTo($body);
+
         var index = streams.home.length - 1;
         while(index >= 0){
           var tweet = streams.home[index];
           var $tweet = $('<div></div>');
-          $tweet.text('@' + tweet.user + ': ' + tweet.message);
+          var $time = moment(tweet.created_at).fromNow();
+          $tweet.text('@' + tweet.user + ': ' + tweet.message + $time);
           $tweet.appendTo($body);
           index -= 1;
         }
