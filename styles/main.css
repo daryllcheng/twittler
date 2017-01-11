@@ -46,6 +46,86 @@ table {
   border-spacing: 0;
 }
 
-.mainTitle {
-	color: blue;
+/*
+  ========================================
+  Grid
+  ========================================
+*/
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  margin: 0 auto;
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 960px;
+}
+
+.center {
+    margin: 0 auto;
+    display: block;
+    width: 7em;
+}
+
+/*
+  ========================================
+  Typography
+  ========================================
+*/
+
+
+
+/*
+  ========================================
+  Buttons
+  ========================================
+*/
+
+.button {
+  border-radius: 5px;
+  text-align: center;
+  border: 1px solid #dfe2e5;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.refresh {
+  
+}
+
+.toTop {
+  
+}
+
+header {
+  padding: 22px 80px 66px 80px;
+}
+
+#hack {
+  float: right;
+  padding-bottom: 44px;
+  padding-top: 44px;
+  text-decoration: none;
+}
+
+.tweet {
+  display: block;
+  width: 50%;
+  height: 100px;
+  padding: 5px;
+  margin: 50px 25%;
+  border: 2px solid #949599;
+  border-radius: 5px;
+  background-color: #dfe2e5;
+  text-align: center;
+}
+
+.tweetTimeStamp {
+  display: block;
 }
