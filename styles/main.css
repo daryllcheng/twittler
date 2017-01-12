@@ -71,15 +71,8 @@ table {
     margin: 0 auto;
     display: block;
     width: 7em;
+    text-align: center;
 }
-
-/*
-  ========================================
-  Typography
-  ========================================
-*/
-
-
 
 /*
   ========================================
@@ -89,43 +82,124 @@ table {
 
 .button {
   border-radius: 5px;
-  text-align: center;
-  border: 1px solid #dfe2e5;
+  border: 1px solid #24325E;
   padding: 10px;
   text-decoration: none;
+  color: #24325E;
 }
 
-.refresh {
-  
+.button:hover {
+  color: #FFFFFF;
+  background: #24325E;
+  box-shadow: 0px 2px 1px 2px rgba(0, 0, 0, .2);
+  cursor: pointer;
 }
 
-.toTop {
-  
+/*
+  ========================================
+  Links
+  ========================================
+*/
+
+header, footer{
+  padding: 22px 80px 20px 80px;
 }
 
-header {
-  padding: 22px 80px 66px 80px;
-}
-
-#hack {
-  float: right;
-  padding-bottom: 44px;
-  padding-top: 44px;
+.credit {
+  margin: 10px auto;
   text-decoration: none;
+  display: block;
+  font-size: 14px;
+  font-weight: normal;
+  color: #24325E;
 }
+
+.credit:hover {
+  cursor: pointer;
+}
+
+#institute {
+  padding-top: 5%;
+  border-top: 4px solid #24325E;
+}
+
+#author {
+  margin-bottom: 10%;
+}
+
+/*
+  ========================================
+  Tweets
+  ========================================
+*/
 
 .tweet {
   display: block;
   width: 50%;
-  height: 100px;
-  padding: 5px;
+  height: 120px;
+  padding: 10px;
   margin: 50px 25%;
   border: 2px solid #949599;
   border-radius: 5px;
-  background-color: #dfe2e5;
-  text-align: center;
+  background: #FFFFFF;
+  line-height: 2em;
+  box-shadow: 0px 2px 1px 2px rgba(0, 0, 0, .2);
+}
+
+.tweet:hover {
+  box-shadow: 0px 3px 2px 3px rgba(0, 0, 0, .2);
+  background: rgba(232, 232, 244, .2);
+  color: #24325E;
+}
+
+.tweetUser {
+  display: block;
+  text-align: left;
+  color: #24325E;
+}
+
+.tweetUser:hover {
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.tweetMessage {
+  display: block;
+  padding: 0 4em;
+  line-height: 1em;
 }
 
 .tweetTimeStamp {
   display: block;
+  text-align: right;
+  font-weight: 200;
+  font-size: 12px;
+}
+
+/*
+  ========================================
+  Others
+  ========================================
+*/
+
+body {
+  color: #888;
+  font: 300 16px/22px "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.headerText {
+  color: #24325E;
+}
+
+#description {
+  padding: 10px;
+  width: 20em;
+}
+
+#title {
+  border-top: 4px solid #24325E;
+  border-bottom: 4px solid #24325E;
+  font-size: 48px;
+  padding: 40px 0;
+  width: 50%;
 }

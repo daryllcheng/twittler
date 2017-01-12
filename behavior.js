@@ -6,7 +6,7 @@ var showTweets = function(tweets) {
   while(index >= 0){
     var tweet = tweets[index];
 
-    var $tweetUser = $("<span class='tweetUser'></span>");
+    var $tweetUser = $("<a class='tweetUser'></a>");
     $tweetUser.text("@" + tweet.user);
 
     var $tweetMessage = $("<span class='tweetMessage'></span>");
@@ -28,10 +28,13 @@ $(document).ready(function(){
     showTweets(streams.home);
   };
   refresh();
-  $(".refresh").on("click", refresh);
+  $(".refresh").on("click", function() {
+    refresh();
+    $("#description").text("feed");
+  });
   $(".tweetDisplay").on("click", ".tweet .tweetUser", function() {
     var $user = $(this).text().slice(1);
-    $("#description").text($user + "'s Timeline")
+    $("#description").text($user + "'s timeline");
     showTweets(streams.users[$user]);
   });
 });
