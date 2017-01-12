@@ -12,9 +12,22 @@
   <body>
     <header class="container">
       <h1 class="center headerText" id="title">Twittler</h1>
-      <span class="center headerText" id="description">feed</span>
       <a class="center button refresh">refresh feed</a>
+      <span class="center headerText" id="description">feed</span>
     </header>
+    <div>
+    <fieldset>
+        <legend>Tweet</legend>
+        <label>
+          @
+          <input type="text" id="username" placeholder="john smith">
+        </label>
+        <label>
+          <input type="text" id="message" placeholder="...">
+        </label>
+        <input class="center button submit" type="submit" name="submit" value="submit">
+      </fieldset>
+    </div>
     <section class="tweetDisplay container"></section>
     <footer class="container">
       <a class="center button" href="#title">Back to Top</a>

@@ -23,6 +23,16 @@ var showTweets = function(tweets) {
   }
 }
 
+var inputTweet = function() {
+  if ($(this).scrollTop() > 200) {
+    $("fieldset").fadeIn(500);
+  }else {
+    $("fieldset").fadeOut(500);
+  }
+}
+
+
+
 $(document).ready(function(){
   var refresh = function() {
     showTweets(streams.home);
@@ -37,4 +47,5 @@ $(document).ready(function(){
     $("#description").text($user + "'s timeline");
     showTweets(streams.users[$user]);
   });
+  $(window).scroll(inputTweet);
 });
