@@ -31,8 +31,6 @@ var inputTweet = function() {
   }
 }
 
-
-
 $(document).ready(function(){
   var refresh = function() {
     showTweets(streams.home);
@@ -48,4 +46,15 @@ $(document).ready(function(){
     showTweets(streams.users[$user]);
   });
   $(window).scroll(inputTweet);
+  $("#submit").on("click", function() {
+    var tweetInput = $("#message").val();
+    if (tweetInput !== "") {
+      window.visitor = $("#username").val() || "anonymous";
+      streams.users[window.visitor] = streams.users[window.visitor] || [];
+      writeTweet(tweetInput);
+      $("#username").val("");
+      $("#message").val("");
+      refresh();
+    }
+  });
 });

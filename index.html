@@ -16,17 +16,19 @@
       <span class="center headerText" id="description">feed</span>
     </header>
     <div>
-    <fieldset>
+    <form>
+      <fieldset>
         <legend>Tweet</legend>
         <label>
           @
           <input type="text" id="username" placeholder="john smith">
         </label>
         <label>
-          <input type="text" id="message" placeholder="...">
+          <input type="text" id="message" placeholder="What's on your mind?">
         </label>
-        <input class="center button submit" type="submit" name="submit" value="submit">
+        <button type="button" class="center button submit" id="submit">tweet!</button>
       </fieldset>
+    </form>
     </div>
     <section class="tweetDisplay container"></section>
     <footer class="container">
